@@ -13,9 +13,8 @@ ALTER TABLE Budget_01
 ADD FOREIGN KEY (CategoryID) REFERENCES Category(CategoryID); 
 
 
---Drop table budget_01
+Drop table budget_01
 
---Set Category and Budget
 INSERT Budget_01 (  PlannedSpending, CategoryID)
 VALUES (  50.00, 1); 
 INSERT Budget_01 (   PlannedSpending, CategoryID)
@@ -46,7 +45,7 @@ SELECT C.CategoryID
 				WHEN C.CategoryID=6 and Month(Time) = Month(GetDate())-1   THEN Price
 				WHEN C.CategoryID=7 and Month(Time) = Month(GetDate())-1   THEN Price
 				Else 0
-			END	) as 'January Budget' 
+			END	) as ' Budget Last Month'
 , SUM(
 			CASE
 				WHEN Month(Time)= Month(GetDate()) THEN Price
@@ -57,7 +56,7 @@ SELECT C.CategoryID
 				WHEN Month(Time)= Month(GetDate()) THEN Price
 				WHEN Month(Time)= Month(GetDate()) THEN Price
 				Else 0
-			END	) as 'Budget Last Month'
+			END	) as 'Current Month'
 
 
 , CAST( SUM(
