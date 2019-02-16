@@ -1,4 +1,4 @@
-# SQL Budget Tut
+# SQL Budget Manager
 Basic Budget Planner I used to learn SQL Server
 
 Insert daily transactions into the t_expense table
