@@ -13,8 +13,9 @@ ALTER TABLE Budget_01
 ADD FOREIGN KEY (CategoryID) REFERENCES Category(CategoryID); 
 
 
-Drop table budget_01
+--Drop table budget_01
 
+--Insert Data (In Progress)
 INSERT Budget_01 (  PlannedSpending, CategoryID)
 VALUES (  50.00, 1); 
 INSERT Budget_01 (   PlannedSpending, CategoryID)
